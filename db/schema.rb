@@ -38,9 +38,4 @@ ActiveRecord::Schema.define(version: 2019_01_16_050150) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "users_tables", force: :cascade do |t|
-    t.string "name"
-    t.string "password_digest"
-  end
-
 end

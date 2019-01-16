@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.create name: 'Garrett', password: 'asdf'
+
+Journal.create title: "Neat birds I saw", user: User.first
+
+Entry.create title: "Bald eagle, seemed lost", body: "This eagle spent like an hour circling the area near Canada Place. It went toward Chinatown for a bit, and then back to Canada Place. I think eventually, it just parked on a roof somewhere, and is probably asking for directions.", user: User.first, journal: Journal.first
