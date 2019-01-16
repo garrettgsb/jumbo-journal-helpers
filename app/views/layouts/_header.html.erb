@@ -1,5 +1,11 @@
 <div class="header">
   <p class="header-heading">Jumbo Journal</p>
   <a href="/">Home</a>
-  <a href="/users/new">New User</a>
+  <% if @current_user %>
+    <p>Oh, hey <%= @current_user.name %></p>
+    <a href="/logout">Log the heck out!</a>
+  <% else %>
+    <a href="/login">Log the heck in!</a>
+    <a href="/users/new">New User</a>
+  <% end %>
 </div>
