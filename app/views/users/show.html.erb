@@ -1,0 +1,5 @@
+<h1><%= @user.name %></h1>
+<h2>Journals</h2>
+<% @journals.each do |journal| %>
+  <a class="card"><%= journal.title %> (<%= journal.entries.length %> entries)</a>
+<% end %>

@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root to: 'application#home'
 
   get '/users', to: 'users#index'
+  get '/users/:id', to: 'users#show'
 end
