@@ -15,10 +15,4 @@ class JournalsController < ApplicationController
   def show
     @journal = Journal.find(params[:id])
   end
-
-  private
-
-  def verify_logged_in
-    redirect_to '/login' unless set_current_user
-  end
 end

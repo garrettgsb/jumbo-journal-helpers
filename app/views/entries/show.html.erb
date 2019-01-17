@@ -1,0 +1,6 @@
+<h1><%= @entry.title %></h1>
+<h2>From <%= link_to @entry.journal.title, @entry.journal %></h2>
+<%= link_to "Edit", edit_entry_path, class: "button" %>
+<%= link_to "Delete", entry_path, class: "button", method: :delete %>
+<hr>
+<p><%= @entry.body %></p>
