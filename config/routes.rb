@@ -13,4 +13,7 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
   get '/logout', to: 'sessions#destroy'
   post '/sessions', to: 'sessions#create'
+
+  # Journals Stuff - What routes does this generate? What routes DOESN'T it generate? (Hint: `rails routes`/`rake routes`)
+  resources :journals, except: [:update, :destroy]
 end

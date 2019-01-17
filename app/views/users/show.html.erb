@@ -2,8 +2,10 @@
 <h2>Journals</h2>
 <% if @journals.length > 0 %>
   <% @journals.each do |journal| %>
-    <a class="card"><%= journal.title %> (<%= journal.entries.length %> entries)</a>
+    <a href="/journals/<%= journal.id %>" class="card"><%= journal.title %> (<%= journal.entries.length %> entries)</a>
   <% end %>
 <% else %>
   <p>This user has no journals 😮</p>
 <% end %>
+<hr>
+<a href="/journals/new" class="button">New Journal</a>

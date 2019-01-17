@@ -1,0 +1,10 @@
+<h1><%= @journal.title %></h1>
+<% if @journal.entries.length > 0 %>
+  <% @journal.entries.each do |entry| %>
+    <a href="/entries/<%= entry.id %>" class="card"><%= entry.title %></a>
+  <% end %>
+<% else %>
+  <p>This journal has no entries 😮</p>
+<% end %>
+<hr>
+<a href="/entries/new" class="button">New Entry</a>
